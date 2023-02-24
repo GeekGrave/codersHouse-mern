@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useLoadingWithRefresh } from './hooks/useLoadingWithRefresh';
 import Loader from './components/Loader/Loader';
+import Room from './pages/Room/Room';
 
 
 
@@ -43,6 +44,11 @@ function App() {
         <Route path = "/rooms" element={
           <ProtectedRoute>
             <Rooms/>
+          </ProtectedRoute>
+        }/>
+        <Route path = "/room/:id" element={
+          <ProtectedRoute>
+            <Room/>
           </ProtectedRoute>
         }/>
       </Routes>
