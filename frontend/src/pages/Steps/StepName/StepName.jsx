@@ -13,6 +13,7 @@ const StepName = ({onNext}) => {
 
   function nextStep(){
     if(!fullname){
+      alert('Please fill all required fields');
       return;
     }
 
